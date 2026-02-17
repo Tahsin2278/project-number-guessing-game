@@ -7,11 +7,22 @@ The winner gets points.
 import random
 
 
+def get_number(prompt):
+    while True:
+        try:
+            value = int(input(prompt))
+            return value
+        except ValueError:
+            print("Please enter a valid number.")
+
+
 def roll_dice() -> int:
     """
     Will return random number.
     """
-    randnum = random.randint(1, 20)
+    min_num = get_number("Choose the minimum value: ")
+    max_num = get_number("Choose the maximum value: ")
+    randnum = random.randint(min_num, max_num)
     return randnum
 
 
