@@ -16,19 +16,16 @@ def get_number(prompt):
             print("Please enter a valid number.")
 
 
-def roll_dice() -> int:
+def roll_dice(min_num: int, max_num: int) -> int:
     """
     Will return random number.
     """
-    min_num = get_number("Choose the minimum value: ")
-    max_num = get_number("Choose the maximum value: ")
-    randnum = random.randint(min_num, max_num)
-    return randnum
+    random_number = random.randint(min_num, max_num)
 
 
-def play():
-    player_roll = roll_dice()
-    computer_roll = roll_dice()
+def play(min_num: int, max_num: int) -> int:
+    player_roll = roll_dice(min_num, max_num)
+    computer_roll = roll_dice(min_num, max_num)
     print(f"You rolled: {player_roll}")
     print(f"Computer rolled: {computer_roll}")
 
@@ -42,10 +39,10 @@ def play():
 
 player_score = 0
 computer_score = 0
-
+min_num = int(input("Enter the minimum number: "))
+max_num = int(input("Enter the maximum number: "))
 while player_score < 3 and computer_score < 3:
-    result = play()
-
+    result = play(min_num, max_num)
     if result == 1:
         player_score += 1
     elif result == -1:
