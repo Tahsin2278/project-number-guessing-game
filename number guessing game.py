@@ -63,5 +63,20 @@ def play_game():
             f"\nAttempt {attempts_used + 1} of {max_attempts}: "
         )
         attempts_used += 1
+        # Check if guess is too low or too high
+        if guess < secret_number:
+            print("⬇️ Too low!")
+        elif guess > secret_number:
+            print("⬆️ Too high!")
+        else:
+    # Display success message if guessed correctly
+            print(
+                f"\n Congratulations {name}! "
+                f"You guessed the number in {attempts_used} attempts."
+            )
+            return
+
+    
+        
 
     
