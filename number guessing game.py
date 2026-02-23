@@ -76,7 +76,16 @@ def play_game():
             )
             return
 
-    
+    # If max attempts are used up, reveal the correct number
+    print(
+        f"\n Out of attempts! "
+        f"The correct number was {secret_number}."
+    )
+
+# --------------------------------------------------
+# Main game loop
+# --------------------------------------------------
+
         
 
     
