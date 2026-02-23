@@ -49,5 +49,19 @@ def play_game():
     while high_number <= low_number:
         print(" High number must be greater than low number.")
         high_number = valid_integer("Enter the HIGH number again: ")
+    # Ask for number of attempts
+    max_attempts= valid_integer("How many attempts do you want?")
+    # Generate random number
+    secret_number= random.randint(low_number, high_number)
+    #Track number of attempts
+    attempts_used=0
+    print(f"\n I have chosen a number between {low_number} and {high_number}.")
+    print("Try to guess it!")
+    # Loop for user guesses
+    while attempts_used < max_attempts:
+        guess = valid_integer(
+            f"\nAttempt {attempts_used + 1} of {max_attempts}: "
+        )
+        attempts_used += 1
 
     
