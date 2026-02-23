@@ -33,3 +33,21 @@ def get_yes_no(prompt):
         else:
             print("Invalid input. Please enter 'y' or 'n'.")
 
+# --------------------------------------------------
+# Function to play one round of the game
+# --------------------------------------------------
+def play_game():
+    # Ask for user's name and greet them
+    name = input("Enter your name: ").strip()
+    print(f"\n Welcome, {name}! Let's play the Number Guessing Game ")
+
+    # Ask for number range
+    low_number = valid_integer("Enter the LOW number: ")
+    high_number = valid_integer("Enter the HIGH number: ")
+
+    # Ensure low_number is less than high_number
+    while high_number <= low_number:
+        print(" High number must be greater than low number.")
+        high_number = valid_integer("Enter the HIGH number again: ")
+
+    
