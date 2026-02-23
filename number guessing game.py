@@ -85,7 +85,15 @@ def play_game():
 # --------------------------------------------------
 # Main game loop
 # --------------------------------------------------
+while True:
+    play_game()
 
+    # Ask if they want to play again, only accepting 'y' or 'n'
+    if not get_yes_no("\nDo you want to play again? (y/n): "):
+        print("\n Goodbye! Thanks for playing.")
+        break
+
+# Run the game
         
 
     
