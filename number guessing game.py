@@ -41,7 +41,7 @@ def get_yes_no(prompt):
 # --------------------------------------------------
 def play_game():
     # Ask for user's name and greet them
-    name = input("Enter your name: ").strip()
+    name = input("Enter your name: ").strip().title()
     print(f"\n Welcome, {name}! Let's play the Number Guessing Game ")
 
     # Ask for number range
@@ -78,7 +78,7 @@ def play_game():
             return
 
     # If max attempts are used up, reveal the correct number
-    print(f"\n Out of attempts! " f"The correct number was {secret_number}.")
+    print(f"\n Out of attempts! The correct number was {secret_number}.")
 
 
 # --------------------------------------------------
